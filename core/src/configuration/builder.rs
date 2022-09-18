@@ -1,7 +1,9 @@
 use std::sync::atomic::{AtomicUsize, Ordering};
+
 use tokio::runtime::Runtime;
+
 use crate::configuration::context_configuration::ContextConfiguration;
-use crate::context::{ApplicationContext, DefaultApplicationContext};
+use crate::context::DefaultApplicationContext;
 
 static ATOMIC_ID: AtomicUsize = AtomicUsize::new(1);
 

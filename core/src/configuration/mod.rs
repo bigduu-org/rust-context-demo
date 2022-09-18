@@ -1,4 +1,4 @@
-pub mod configuration_properties;
+pub mod properties;
 pub mod builder;
 pub mod context_configuration;
 

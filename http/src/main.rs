@@ -1,18 +1,18 @@
-use std::borrow::Borrow;
 use std::net::SocketAddr;
-use std::rc::Rc;
 use std::sync::Arc;
 use std::time;
+
+use axum::{Json, Router};
 use axum::http::StatusCode;
 use axum::response::IntoResponse;
-use axum::{Json, Router};
 use axum::routing::get;
 use lazy_static::lazy_static;
-use log::{info};
-use mongodb::bson::{doc};
+use log::info;
+use mongodb::bson::doc;
 use mongodb::options::ClientOptions;
-use tokio::sync::{RwLock};
-use core::configuration::{builder};
+use tokio::sync::RwLock;
+
+use core::configuration::builder;
 use core::context::DefaultApplicationContext;
 
 async fn mongo() -> Result<(), mongodb::error::Error> {

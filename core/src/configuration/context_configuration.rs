@@ -1,5 +1,6 @@
 use std::fs::File;
-use crate::configuration::configuration_properties::ConfigurationProperties;
+
+use crate::configuration::properties::ConfigurationProperties;
 
 #[derive(Debug, Default, Clone)]
 pub struct ContextConfiguration {

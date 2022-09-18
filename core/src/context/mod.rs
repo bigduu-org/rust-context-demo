@@ -1,5 +1,6 @@
 use log::info;
 use tokio::runtime::Runtime;
+
 use crate::configuration::context_configuration::ContextConfiguration;
 
 pub trait ApplicationContext {
