@@ -1,0 +1,5 @@
+bigduu:
+  log4rs:
+    resources: "resources/log4rs.yaml"
+  tokio:
+    workers: 32

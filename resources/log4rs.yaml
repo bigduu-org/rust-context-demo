@@ -1,0 +1,39 @@
+refresh_rate: 30 seconds
+appenders:
+  stdout:
+    kind: console
+    encoder:
+      pattern: "{d(%Y-%m-%d %H:%M:%S)} | {h({l})} | {T} | {f}:{L} — {m}{n}"
+    filters:
+      - kind: threshold
+        level: info
+#  file-appenders:
+#    kind: file
+#    path: "logs/axum.log"
+#    encoder:
+#      pattern: "{d(%+)(utc)} | {h({l})} | {T} | {f}:{L} — {m}{n}"
+#    policy:
+#      # Identifies which policy is to be used. If no kind is specified, it will
+#      # default to "compound".
+#      kind: compound
+#      # The remainder of the configuration is passed along to the policy's
+#      # deserializer, and will vary based on the kind of policy.
+#      trigger:
+#        kind: size
+#        limit: 1mb
+#      roller:
+#        kind: fixed_window
+#        base: 1
+#        count: 5
+#        pattern: "logs/axum.{}.log"
+root:
+  level: debug
+  appenders:
+    - stdout
+
+#loggers:
+#  file-loggers:
+#    level: debug
+#    appenders:
+#      - file-appenders
+#    additive: false
